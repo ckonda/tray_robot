@@ -21,7 +21,7 @@ Roomba.prototype.move = function(direction, environment) {
    var coordinate;
    switch(direction){
        case 'N':
-            if(this.y < (environment.yAxis - 1)){ //ensure within environment parameter
+            if(this.y < (environment.yAxis - 1)){ //ensure within environment parameter. If goes upto wall, no action taken
                 this.y += 1;
             }
             coordinate = "" + this.x + this.y//concat x,y together to make string
