@@ -9,7 +9,7 @@ Simply download the folder and launch your shell into the directory. Edit the `i
 
 `install npm`
 
-Then launch the start command.
+Then launch the start command from main `/tray_robot` folder.
 
 `npm start`
 
