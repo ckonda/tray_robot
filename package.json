@@ -1,0 +1,28 @@
+{
+  "name": "tray_robot",
+  "version": "1.0.0",
+  "description": "Roomba thinks, Roomba does",
+  "main": "main.js",
+  "bin": {
+    "toy-robot": "bin/main.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/main.js"
+  },
+  "author": "Chatan Konda",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ckonda/tray_robot.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/ckonda/tray_robot/issues"
+  },
+  "homepage": "https://github.com/ckonda/tray_robot#readme",
+  "dependencies": {
+    "boxen": "^4.0.0",
+    "chalk": "^2.4.2"
+  }
+}
