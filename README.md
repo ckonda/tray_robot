@@ -5,7 +5,7 @@ Robot Vacuum which navigates a grid coordinate room based on given instruction.
 
 ### To run the app:
 
-First ensure all dependencis are installed.
+First ensure all dependencies are installed.
 
 `install npm`
 
