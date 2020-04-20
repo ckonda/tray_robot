@@ -12,5 +12,3 @@ First ensure all dependencies are installed.
 Run the start command.
 
 `npm start`
-
-

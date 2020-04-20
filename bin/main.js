@@ -15,27 +15,7 @@ var fs = require('fs'),
 
 var roomba = new Roomba();
 
-try {
-  const fileStream = fs.createReadStream(filePath)
-  var lineCount = 0
-
-  rl = readline.createInterface({
-          input: fileStream
-  });
-
-  rl.on('line', (line) => {
-  ++lineCount;
-  lineCheck(line, lineCount);
-  });
-
-  rl.on('close', (line) => {
-    process.exit(0);
-  });
-
-} catch (err) {
-  console.error(err)
-}
-
+//helper functions
 function lineCheck(data, lineCount) {
 
   var data = data.replace(/\s+/g, '');//remove whitespaces
@@ -63,8 +43,8 @@ function lineCheck(data, lineCount) {
   }
 }
 
-//helper functions
 function splitNum(data) { //split number into array of strings
+
   var dataArr = [],
       stringData = data.toString();
 
@@ -76,4 +56,26 @@ function splitNum(data) { //split number into array of strings
 
 function hasNumber(myString) { //check if numeric
   return /\d/.test(myString);
+}
+
+try {
+  
+  const fileStream = fs.createReadStream(filePath)
+  var lineCount = 0
+
+  rl = readline.createInterface({
+          input: fileStream
+  });
+
+  rl.on('line', (line) => {
+  ++lineCount;
+  lineCheck(line, lineCount);
+  });
+
+  rl.on('close', (line) => {
+    process.exit(0);
+  });
+
+} catch (err) {
+  console.error(err)
 }
